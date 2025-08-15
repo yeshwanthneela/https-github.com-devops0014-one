@@ -5,30 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Harish DevOps Studio</title>
   <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
 </head>
 <body>
-
-  <!-- Header -->
   <header>
-    <div class="logo">Harish Studio</div>
     <nav>
-      <a href="#services">Services</a>
-      <a href="#gallery">Gallery</a>
-      <a href="#contact">Contact</a>
+      <h1>Harish Studio</h1>
+      <ul>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
     </nav>
+    <div class="hero">
+      <h2>Build. Automate. Deploy.</h2>
+      <p>Crafting scalable cloud solutions with precision and passion.</p>
+      <a href="#contact" class="btn">Get Started</a>
+    </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-overlay">
-      <h1>Build. Automate. Deploy.</h1>
-      <p>Crafting scalable cloud solutions with precision and passion.</p>
-      <a href="#services" class="btn">Get Started</a>
-    </div>
-  </section>
-
-  <!-- Services -->
-  <section class="services" id="services">
+  <section id="services">
     <h2>Our Services</h2>
     <div class="cards">
       <div class="card">
@@ -46,32 +42,27 @@
     </div>
   </section>
 
-  <!-- Gallery -->
-  <section class="gallery" id="gallery">
+  <section id="gallery">
     <h2>Project Gallery</h2>
-    <div class="gallery-grid">
-      <img src="https://via.placeholder.com/400x300" alt="Project 1" />
-      <img src="https://via.placeholder.com/400x300" alt="Project 2" />
-      <img src="https://via.placeholder.com/400x300" alt="Project 3" />
+    <div class="gallery">
+      <div class="project">Project 1</div>
+      <div class="project">Project 2</div>
+      <div class="project">Project 3</div>
     </div>
   </section>
 
-  <!-- Contact -->
-  <section class="contact" id="contact">
+  <section id="contact">
     <h2>Contact Us</h2>
-    <form id="contact-form">
-      <input type="text" id="name" placeholder="Your Name" />
-      <input type="email" id="email" placeholder="Your Email" />
-      <textarea id="message" rows="5" placeholder="Your Message"></textarea>
+    <form>
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="Your Message" required></textarea>
       <button type="submit">Send Message</button>
     </form>
   </section>
 
-  <!-- Footer -->
   <footer>
-    <p>&copy; 2025 Harish DevOps Studio. All rights reserved.</p>
+    <p>© 2025 Harish DevOps Studio. All rights reserved.</p>
   </footer>
-
-  <script src="script.js" defer></script>
 </body>
 </html>
