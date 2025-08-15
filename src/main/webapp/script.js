@@ -1,14 +1,26 @@
-// Form Submission Handling
-document.getElementById('contact-form').addEventListener('submit', function (e) {
-  e.preventDefault();
-  const name = document.getElementById('name').value;
-  const email = document.getElementById('email').value;
-  const message = document.getElementById('message').value;
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.getElementById('contact-form');
+  const inputs = ['name', 'email', 'message'];
 
-  if (name && email && message) {
-    alert('Thank you for contacting us! We will get back to you soon.');
-    document.getElementById('contact-form').reset();
-  } else {
-    alert('Please fill out all fields.');
-  }
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    let isValid = true;
+    inputs.forEach(id => {
+      const input = document.getElementById(id);
+      if (!input.value.trim()) {
+        input.classList.add('input-error');
+        isValid = false;
+      } else {
+        input.classList.remove('input-error');
+      }
+    });
+
+    if (isValid) {
+      alert('✅ Message sent successfully!');
+      form.reset();
+    } else {
+      alert('⚠️ Please fill out all fields.');
+    }
+  });
 });
